@@ -57,7 +57,7 @@ header {
 }
 
 .nav-links a:hover {
-  background-color: $f2-color;
+  background-color: $f1-color;
   color: #2b2a2a;
   border-radius: 5px;
 }
@@ -123,7 +123,7 @@ footer {
   margin: 1rem;
   width: 2rem;
   height: 2rem;
-  background-image: url("image1.png");
+  background-image: url("/pages/home/image1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -145,6 +145,70 @@ footer {
 // .button:hover {
 //   background-color: $primary-color;
 // }
+
+.register-container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: $f4-color;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: $f1-color;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid $f2-color;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: $f2-color;
+  color: $f1-color;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: $f3-color;
+}
+
+a {
+  color: $f2-color; /* changes the text color of the link */
+  text-decoration: none; /* removes the underline from the link */
+}
+
+a:hover {
+  color: $f1-color; /* changes the text color of the link when hovering over it */
+  text-decoration: underline; /* adds an underline to the link when hovering over it */
+}
+
+a:visited {
+  color: $f2-color; /* changes the text color of the link */
+  text-decoration: none; /* removes the underline from the link */
+}
 
 /* On mobile devices, make button full width */
 @media screen and (max-width: 480px) {
