@@ -1,4 +1,9 @@
 /* Global styles */
+$f1-color: #cbe4de;
+$f2-color: #0e8388;
+$f3-color: #2e4f4f;
+$f4-color: #2c3333;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,27 +20,27 @@ body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #cbe4de;
-  background-color: #2e4f4f;
+  color: $f1-color;
+  background-color: $f3-color;
 }
 
 /* Header styles */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3333;
-  color: #cbe4de;
+  background-color: $f4-color;
+  color: $f1-color;
   padding: 1rem;
 }
 
 .logo {
   font-size: 2rem;
 }
-
 .logo a[href] {
   text-decoration: none;
-  color: #cbe4de;
+  color: $f1-color;
 }
 
 .nav-links {
@@ -45,14 +50,14 @@ header {
 }
 
 .nav-links a {
-  color: #cbe4de;
+  color: $f1-color;
   text-decoration: none;
   padding: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
-  background-color: #cbe4de;
+  background-color: $f1-color;
   color: #2b2a2a;
   border-radius: 5px;
 }
@@ -61,8 +66,7 @@ header {
   display: flex;
   align-items: center;
 }
-
-d .user-info img {
+.user-info img {
   width: 40px;
   height: 40px;
   margin-left: 1rem;
@@ -70,6 +74,7 @@ d .user-info img {
 }
 
 /* Main styles */
+
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -98,8 +103,8 @@ main {
 
 /* Footer styles */
 footer {
-  background-color: #2c3333;
-  color: #cbe4de;
+  background-color: $f4-color;
+  color: $f1-color;
   text-align: center;
   padding: 1rem;
 }
@@ -124,12 +129,28 @@ footer {
   background-repeat: no-repeat;
 }
 
+// .button {
+//   display: inline-block;
+//   margin: 0 5px;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 5px;
+//   background-color: $primary-color;
+//   color: $secondary-color;
+//   font-size: 16px;
+//   transition: background-color 0.2s ease-in-out;
+// }
+
 /* On hover, change background color */
-.register-container {
+// .button:hover {
+//   background-color: $primary-color;
+// }
+
+.userPage-container {
   width: 500px;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #2c3333;
+  background-color: $f4-color;
   padding: 20px;
   text-align: center;
 }
@@ -147,52 +168,73 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #cbe4de;
+  color: $f1-color;
 }
 
 input {
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #0e8388;
+  border: 1px solid $f2-color;
   width: 100%;
   box-sizing: border-box;
-  background-color: #2e4f4f;
   font-size: 16px;
-}
-
-input:focus {
-  transition: 0.5s;
-  background-color: #cbe4de;
 }
 
 button {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #0e8388;
-  color: #cbe4de;
+  background-color: $f2-color;
+  color: $f1-color;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #2e4f4f;
+  background-color: $f3-color;
 }
 
 a {
-  color: #0e8388; /* changes the text color of the link */
+  color: $f2-color; /* changes the text color of the link */
   text-decoration: none; /* removes the underline from the link */
 }
 
 a:hover {
-  color: #cbe4de; /* changes the text color of the link when hovering over it */
+  color: $f1-color; /* changes the text color of the link when hovering over it */
   text-decoration: underline; /* adds an underline to the link when hovering over it */
 }
 
 a:visited {
-  color: #cbe4de; /* changes the text color of the link */
+  color: $f1-color; /* changes the text color of the link */
   text-decoration: none; /* removes the underline from the link */
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: $f4-color;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group span {
+  border: 1px solid $f2-color;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: $f3-color;
 }
 
 /* On mobile devices, make button full width */
@@ -202,4 +244,4 @@ a:visited {
     margin: 10px 0;
     width: 100%;
   }
-}/*# sourceMappingURL=register.css.map */
+}

@@ -177,7 +177,14 @@ input {
   border: 1px solid $f2-color;
   width: 100%;
   box-sizing: border-box;
+  background-color: $f3-color;
   font-size: 16px;
+}
+
+input:focus {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: $f1-color;
 }
 
 button {
@@ -206,7 +213,7 @@ a:hover {
 }
 
 a:visited {
-  color: $f2-color; /* changes the text color of the link */
+  color: $f1-color; /* changes the text color of the link */
   text-decoration: none; /* removes the underline from the link */
 }
 

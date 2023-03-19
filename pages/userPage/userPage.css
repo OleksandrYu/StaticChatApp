@@ -62,7 +62,7 @@ header {
   align-items: center;
 }
 
-d .user-info img {
+.user-info img {
   width: 40px;
   height: 40px;
   margin-left: 1rem;
@@ -125,7 +125,7 @@ footer {
 }
 
 /* On hover, change background color */
-.register-container {
+.userPage-container {
   width: 500px;
   margin: 0 auto;
   border-radius: 10px;
@@ -156,13 +156,7 @@ input {
   border: 1px solid #0e8388;
   width: 100%;
   box-sizing: border-box;
-  background-color: #2e4f4f;
   font-size: 16px;
-}
-
-input:focus {
-  transition: 0.5s;
-  background-color: #cbe4de;
 }
 
 button {
@@ -195,6 +189,33 @@ a:visited {
   text-decoration: none; /* removes the underline from the link */
 }
 
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #2c3333;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group span {
+  border: 1px solid #0e8388;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #2e4f4f;
+}
+
 /* On mobile devices, make button full width */
 @media screen and (max-width: 480px) {
   .button {
@@ -202,4 +223,4 @@ a:visited {
     margin: 10px 0;
     width: 100%;
   }
-}/*# sourceMappingURL=register.css.map */
+}/*# sourceMappingURL=userPage.css.map */

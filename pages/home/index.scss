@@ -57,7 +57,7 @@ header {
 }
 
 .nav-links a:hover {
-  background-color: $f2-color;
+  background-color: $f1-color;
   color: #2b2a2a;
   border-radius: 5px;
 }
@@ -128,6 +128,37 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: $f2-color;
+  color: $f1-color;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: $f3-color;
+}
+
+a {
+  color: $f2-color; /* changes the text color of the link */
+  text-decoration: none; /* removes the underline from the link */
+}
+
+a:hover {
+  color: $f1-color; /* changes the text color of the link when hovering over it */
+  text-decoration: underline; /* adds an underline to the link when hovering over it */
+}
+
+a:visited {
+  color: $f1-color; /* changes the text color of the link */
+  text-decoration: none; /* removes the underline from the link */
+}
+
 
 // .button {
 //   display: inline-block;

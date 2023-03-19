@@ -157,6 +157,12 @@ input {
   width: 100%;
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #2e4f4f;
+}
+
+input:focus {
+  transition: 0.5s;
+  background-color: #cbe4de;
 }
 
 button {
@@ -185,7 +191,7 @@ a:hover {
 }
 
 a:visited {
-  color: #0e8388; /* changes the text color of the link */
+  color: #cbe4de; /* changes the text color of the link */
   text-decoration: none; /* removes the underline from the link */
 }
 
