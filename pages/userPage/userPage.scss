@@ -24,6 +24,10 @@ header {
   color: $f1-color;
   width: 100%;
 }
+.username-text {
+  color: $f2-color;
+  text-decoration: none;
+}
 .logo {
   font-size: 2rem;
 }
@@ -117,8 +121,11 @@ a:visited {
   text-decoration: none;
 }
 .form-wrapper {
+  width: 50%;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: $f4-color;
   border-radius: 10px;
   padding: 30px;
@@ -134,6 +141,8 @@ a:visited {
   margin-bottom: 5px;
 }
 .form-group span {
+  overflow: auto;
+  text-overflow: clip;
   border: 1px solid $f2-color;
   border-radius: 5px;
   padding: 8px;
@@ -147,8 +156,34 @@ a:visited {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .form-wrapper {
+    width: 70%;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 525px) {
   .username-text {
     display: none;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .username-text {
+    display: none;
+  }
+  .form-wrapper {
+    width: 90%;
   }
 }

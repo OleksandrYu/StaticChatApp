@@ -24,6 +24,15 @@ header {
   color: $f1-color;
   width: 100%;
 }
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.username-text {
+  color: $f2-color;
+  text-decoration: none;
+}
 .logo {
   font-size: 2rem;
 }
@@ -123,6 +132,7 @@ a {
   color: $f1-color;
   text-align: start;
 }
+
 a:hover {
   color: $f1-color;
   text-decoration: underline;
@@ -132,12 +142,26 @@ a:visited {
   text-decoration: none;
 }
 .register-container {
-  width: 500px;
+  width: 53%;
   margin: 0 auto;
   border-radius: 10px;
   background-color: $f4-color;
   padding: 20px;
   text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .register-container {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .username-text {
+    display: none;
+  }
+  .register-container {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -148,8 +172,11 @@ a:visited {
   }
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 400px) {
   .username-text {
     display: none;
+  }
+  .register-container {
+    width: 90%;
   }
 }

@@ -21,6 +21,11 @@ header {
   width: 100%;
 }
 
+.username-text {
+  color: #0e8388;
+  text-decoration: none;
+}
+
 .logo {
   font-size: 2rem;
 }

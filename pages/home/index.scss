@@ -27,7 +27,10 @@ header {
   // padding: 1rem;
   width: 100%;
 }
-
+.username-text {
+  color: $f2-color;
+  text-decoration: none;
+}
 .logo {
   font-size: 2rem;
 }

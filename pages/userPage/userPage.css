@@ -21,6 +21,11 @@ header {
   width: 100%;
 }
 
+.username-text {
+  color: #0e8388;
+  text-decoration: none;
+}
+
 .logo {
   font-size: 2rem;
 }
@@ -132,8 +137,11 @@ a:visited {
 }
 
 .form-wrapper {
+  width: 50%;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #2c3333;
   border-radius: 10px;
   padding: 30px;
@@ -152,6 +160,8 @@ a:visited {
 }
 
 .form-group span {
+  overflow: auto;
+  text-overflow: clip;
   border: 1px solid #0e8388;
   border-radius: 5px;
   padding: 8px;
@@ -165,8 +175,32 @@ a:visited {
     width: 100%;
   }
 }
+@media only screen and (max-width: 750px) {
+  .form-wrapper {
+    width: 70%;
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 525px) {
   .username-text {
     display: none;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .username-text {
+    display: none;
+  }
+  .form-wrapper {
+    width: 90%;
   }
 }/*# sourceMappingURL=userPage.css.map */
