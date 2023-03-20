@@ -18,7 +18,7 @@ header {
   align-items: center;
   background-color: #2c3333;
   color: #cbe4de;
-  padding: 1rem;
+  width: 100%;
 }
 
 .logo {
@@ -33,7 +33,7 @@ header {
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: auto;
 }
 
 .nav-links a {
@@ -98,8 +98,10 @@ footer {
 }
 
 a {
-  color: #0e8388;
-  text-decoration: none;
+  display: flex;
+  padding-left: 10px;
+  color: #cbe4de;
+  text-align: start;
 }
 
 a:hover {
@@ -110,4 +112,10 @@ a:hover {
 a:visited {
   color: #cbe4de;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 525px) {
+  .username-text {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

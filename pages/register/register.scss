@@ -22,7 +22,7 @@ header {
   align-items: center;
   background-color: $f4-color;
   color: $f1-color;
-  padding: 1rem;
+  width: 100%;
 }
 .logo {
   font-size: 2rem;
@@ -34,7 +34,7 @@ header {
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: auto;
 }
 .nav-links a {
   color: $f1-color;
@@ -118,8 +118,10 @@ button:hover {
   background-color: $f3-color;
 }
 a {
-  color: $f2-color;
-  text-decoration: none;
+  display: flex;
+  padding-left: 10px;
+  color: $f1-color;
+  text-align: start;
 }
 a:hover {
   color: $f1-color;
@@ -143,5 +145,11 @@ a:visited {
     display: block;
     margin: 10px 0;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .username-text {
+    display: none;
   }
 }
