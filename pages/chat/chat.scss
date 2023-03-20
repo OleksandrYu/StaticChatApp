@@ -1,21 +1,14 @@
-/* Global styles */
+// /* Global styles */
 $f1-color: #cbe4de;
 $f2-color: #0e8388;
 $f3-color: #2e4f4f;
 $f4-color: #2c3333;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 html {
   height: 100%;
   margin: 0;
   font-size: 16px;
 }
-
 body {
   height: 100%;
   margin: 0;
@@ -23,9 +16,6 @@ body {
   color: $f1-color;
   background-color: $f3-color;
 }
-
-/* Header styles */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -34,7 +24,6 @@ header {
   color: $f1-color;
   padding: 1rem;
 }
-
 .logo {
   font-size: 2rem;
 }
@@ -42,118 +31,56 @@ header {
   text-decoration: none;
   color: $f1-color;
 }
-
 .nav-links {
   display: flex;
   justify-content: space-between;
   width: 30%;
 }
-
 .nav-links a {
   color: $f1-color;
   text-decoration: none;
   padding: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-links a:hover {
   background-color: $f1-color;
   color: #2b2a2a;
   border-radius: 5px;
 }
-
 .user-info {
   display: flex;
   align-items: center;
 }
-d .user-info img {
-  width: 40px;
-  height: 40px;
-  margin-left: 1rem;
-  border-radius: 50%;
-}
 
-/* Main styles */
-
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4rem;
-}
-
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -50px; /* height of the footer */
-}
-
-.about {
-  text-align: center;
-  margin-top: 8rem;
-}
-
-.about h1 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.about p {
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-/* Footer styles */
 footer {
   background-color: $f4-color;
   color: $f1-color;
   text-align: center;
   padding: 1rem;
 }
-
-.left {
-  font-size: 24px;
-}
-
-.middle {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
-
 .image-container {
   margin: 1rem;
   width: 2rem;
   height: 2rem;
-  background-image: url("/pages/home/image1.png");
+  background-image: url(/pages/home/image1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.register-container {
-  width: 500px;
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: $f4-color;
-  padding: 20px;
-  text-align: center;
-}
-
 h1 {
+  text-align: center;
   margin-top: 0;
 }
-
 .form-group {
   margin: 10px 0;
   text-align: left;
 }
-
 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 700;
   color: $f1-color;
 }
-
 input {
   padding: 5px;
   border-radius: 5px;
@@ -162,14 +89,14 @@ input {
   box-sizing: border-box;
   background-color: $f3-color;
   font-size: 16px;
+  color: $f1-color;
 }
-
 input:focus {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  color: $f3-color;
   background-color: $f1-color;
 }
-
 button {
   padding: 10px;
   border-radius: 5px;
@@ -180,27 +107,191 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 button:hover {
   background-color: $f3-color;
 }
-
 a {
-  color: $f2-color; /* changes the text color of the link */
-  text-decoration: none; /* removes the underline from the link */
+  color: $f2-color;
+  text-decoration: none;
 }
-
 a:hover {
-  color: $f1-color; /* changes the text color of the link when hovering over it */
-  text-decoration: underline; /* adds an underline to the link when hovering over it */
+  color: $f1-color;
+  text-decoration: underline;
 }
-
 a:visited {
-  color: $f1-color; /* changes the text color of the link */
-  text-decoration: none; /* removes the underline from the link */
+  color: $f1-color;
+  text-decoration: none;
+}
+.register-container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: $f4-color;
+  padding: 20px;
+  text-align: center;
+}
+// Body elements
+.main-view {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  margin-bottom: 0px;
 }
 
-/* On mobile devices, make button full width */
+.user-list {
+  margin: 0.5rem;
+  background-color: $f4-color;
+
+  // border: 3px solid $f1-color;
+
+  border-radius: 20px;
+  width: 250px;
+  height: fit-content;
+  max-height: 100%;
+  max-width: 300px;
+  height: auto;
+  max-height: 1000px;
+
+  overflow: auto;
+
+  position: sticky;
+  left: 0;
+}
+
+.user-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.user-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.user-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0.5rem;
+}
+.badge {
+  background-color: $f2-color;
+  color: $f1-color;
+  padding: 3px 7px;
+  margin: 0.3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.badge-warn {
+  background-color: #a88a14;
+  color: $f1-color;
+  padding: 3px 7px;
+  margin: 0.3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.image-container-small {
+  margin: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/pages/home/image1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-view {
+  border-radius: 10px;
+  padding: 1rem;
+  width: 960px;
+  background-color: $f4-color;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  // border: 2px solid;
+  // border-color: $f1-color;
+}
+.message-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  background-color: $f3-color;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem 2rem 2rem 0;
+}
+.message-box h2 {
+  margin: 0.125rem;
+}
+
+.message-box p {
+  margin: 0.5rem;
+}
+
+.message-box-own {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  background-color: $f2-color;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem 2rem 2rem 0;
+}
+.message-box-own h2 {
+  margin: 0.125rem;
+}
+
+.message-box-own p {
+  margin: 0.5rem;
+}
+
+.time {
+  font-size: small;
+  margin: 0.125rem;
+  text-align: end;
+}
+
+.message-input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: $f4-color;
+  border-radius: 2rem;
+  position: sticky;
+  bottom: 0;
+}
+.message-input input {
+  max-width: 960px;
+  width: 750px;
+  color: $f1-color;
+}
+
+.message-input input:focus {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: $f4-color;
+  background-color: $f1-color;
+}
+
 @media screen and (max-width: 480px) {
   .button {
     display: block;

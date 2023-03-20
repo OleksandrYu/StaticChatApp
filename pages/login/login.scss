@@ -96,11 +96,13 @@ input {
   box-sizing: border-box;
   font-size: 16px;
   background-color: $f3-color;
+  color: $f1-color;
 }
 input:focus {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: $f1-color;
+  color: $f4-color;
 }
 button {
   padding: 10px;

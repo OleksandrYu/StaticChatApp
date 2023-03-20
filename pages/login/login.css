@@ -106,11 +106,13 @@ input {
   box-sizing: border-box;
   font-size: 16px;
   background-color: #2e4f4f;
+  color: #cbe4de;
 }
 
 input:focus {
   transition: 0.5s;
   background-color: #cbe4de;
+  color: #2c3333;
 }
 
 button {
