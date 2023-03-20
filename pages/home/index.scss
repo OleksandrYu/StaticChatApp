@@ -1,14 +1,8 @@
-/* Global styles */
+// /* Global styles */
 $f1-color: #cbe4de;
 $f2-color: #0e8388;
 $f3-color: #2e4f4f;
 $f4-color: #2c3333;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 html {
   height: 100%;
@@ -23,8 +17,6 @@ body {
   color: $f1-color;
   background-color: $f3-color;
 }
-
-/* Header styles */
 
 header {
   display: flex;
@@ -42,146 +34,71 @@ header {
   text-decoration: none;
   color: $f1-color;
 }
-
 .nav-links {
   display: flex;
   justify-content: space-between;
   width: 30%;
 }
-
 .nav-links a {
   color: $f1-color;
   text-decoration: none;
   padding: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
-
 .nav-links a:hover {
   background-color: $f1-color;
   color: #2b2a2a;
   border-radius: 5px;
 }
-
 .user-info {
   display: flex;
   align-items: center;
 }
-d .user-info img {
-  width: 40px;
-  height: 40px;
-  margin-left: 1rem;
-  border-radius: 50%;
-}
-
-/* Main styles */
-
 main {
   max-width: 960px;
   margin: 0 auto;
   padding: 4rem;
 }
-
 .wrapper {
   min-height: 100%;
-  margin-bottom: -50px; /* height of the footer */
+  margin-bottom: -50px;
 }
-
 .about {
   text-align: center;
   margin-top: 8rem;
 }
-
 .about h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-
 .about p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
-
-/* Footer styles */
 footer {
   background-color: $f4-color;
   color: $f1-color;
   text-align: center;
   padding: 1rem;
 }
-
-.left {
-  font-size: 24px;
-}
-
-.middle {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-}
-
 .image-container {
   margin: 1rem;
   width: 2rem;
   height: 2rem;
-  background-image: url("image1.png");
+  background-image: url(image1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: $f2-color;
-  color: $f1-color;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: $f3-color;
-}
-
 a {
-  color: $f2-color; /* changes the text color of the link */
-  text-decoration: none; /* removes the underline from the link */
+  color: $f2-color;
+  text-decoration: none;
 }
-
 a:hover {
-  color: $f1-color; /* changes the text color of the link when hovering over it */
-  text-decoration: underline; /* adds an underline to the link when hovering over it */
+  color: $f1-color;
+  text-decoration: underline;
 }
-
 a:visited {
-  color: $f1-color; /* changes the text color of the link */
-  text-decoration: none; /* removes the underline from the link */
-}
-
-
-// .button {
-//   display: inline-block;
-//   margin: 0 5px;
-//   padding: 10px 20px;
-//   border: none;
-//   border-radius: 5px;
-//   background-color: $primary-color;
-//   color: $secondary-color;
-//   font-size: 16px;
-//   transition: background-color 0.2s ease-in-out;
-// }
-
-/* On hover, change background color */
-// .button:hover {
-//   background-color: $primary-color;
-// }
-
-/* On mobile devices, make button full width */
-@media screen and (max-width: 480px) {
-  .button {
-    display: block;
-    margin: 10px 0;
-    width: 100%;
-  }
+  color: $f1-color;
+  text-decoration: none;
 }
