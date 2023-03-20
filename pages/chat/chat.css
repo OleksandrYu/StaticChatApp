@@ -18,7 +18,7 @@ header {
   align-items: center;
   background-color: #2c3333;
   color: #cbe4de;
-  padding: 1rem;
+  width: 100%;
 }
 
 .logo {
@@ -30,10 +30,17 @@ header {
   color: #cbe4de;
 }
 
+a {
+  display: flex;
+  padding-left: 10px;
+  color: #cbe4de;
+  text-align: start;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: auto;
 }
 
 .nav-links a {
@@ -120,7 +127,7 @@ button:hover {
   background-color: #2e4f4f;
 }
 
-a {
+.username-text {
   color: #0e8388;
   text-decoration: none;
 }
@@ -146,7 +153,7 @@ a:visited {
 
 .main-view {
   display: flex;
-  flex-direction: row;
+  margin: 0 auto;
   min-height: 100%;
   margin-bottom: 0px;
 }
@@ -158,7 +165,6 @@ a:visited {
   width: 250px;
   height: -moz-fit-content;
   height: fit-content;
-  max-height: 100%;
   max-width: 300px;
   height: auto;
   max-height: 1000px;
@@ -172,7 +178,7 @@ a:visited {
 }
 
 .user-list::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px #2e4f4f;
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -180,7 +186,7 @@ a:visited {
 
 .user-list::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px #0e8388;
 }
 
 .user-box {
@@ -197,6 +203,7 @@ a:visited {
   margin: 0.3rem;
   text-align: center;
   border-radius: 10px;
+  margin-left: auto;
 }
 
 .badge-warn {
@@ -206,6 +213,7 @@ a:visited {
   margin: 0.3rem;
   text-align: center;
   border-radius: 10px;
+  margin-left: auto;
 }
 
 .image-container-small {
@@ -219,21 +227,38 @@ a:visited {
 }
 
 main {
-  max-width: 1080px;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 .chat-view {
   border-radius: 10px;
   padding: 1rem;
-  width: 960px;
+  width: 90%;
   background-color: #2c3333;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  height: 1000px;
+  overflow: auto;
+}
+
+.chat-view::-webkit-scrollbar {
+  width: 12px;
+}
+
+.chat-view::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #2e4f4f;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.chat-view::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #0e8388;
 }
 
 .message-box {
@@ -276,9 +301,11 @@ main {
   font-size: small;
   margin: 0.125rem;
   text-align: end;
+  color: rgba(203, 228, 222, 0.6588235294);
 }
 
 .message-input {
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -287,12 +314,17 @@ main {
   border-radius: 2rem;
   position: sticky;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 30px #2e4f4f;
 }
 
 .message-input input {
   max-width: 960px;
-  width: 750px;
+  width: 100%;
   color: #cbe4de;
+  margin-right: 1rem;
 }
 
 .message-input input:focus {
@@ -306,5 +338,16 @@ main {
     display: block;
     margin: 10px 0;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .user-list {
+    display: none;
+  }
+  main {
+    width: 95%;
+  }
+  .username-text {
+    display: none;
   }
 }/*# sourceMappingURL=chat.css.map */

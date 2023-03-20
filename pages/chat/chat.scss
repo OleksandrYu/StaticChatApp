@@ -1,5 +1,6 @@
 // /* Global styles */
 $f1-color: #cbe4de;
+$f1-color-darker: #cbe4dea8;
 $f2-color: #0e8388;
 $f3-color: #2e4f4f;
 $f4-color: #2c3333;
@@ -22,7 +23,8 @@ header {
   align-items: center;
   background-color: $f4-color;
   color: $f1-color;
-  padding: 1rem;
+  // padding: 1rem;
+  width: 100%;
 }
 .logo {
   font-size: 2rem;
@@ -31,10 +33,16 @@ header {
   text-decoration: none;
   color: $f1-color;
 }
+a {
+  display: flex;
+  padding-left: 10px;
+  color: $f1-color;
+  text-align: start;
+}
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: auto;
 }
 .nav-links a {
   color: $f1-color;
@@ -110,7 +118,7 @@ button {
 button:hover {
   background-color: $f3-color;
 }
-a {
+.username-text {
   color: $f2-color;
   text-decoration: none;
 }
@@ -133,7 +141,7 @@ a:visited {
 // Body elements
 .main-view {
   display: flex;
-  flex-direction: row;
+  margin: 0 auto;
   min-height: 100%;
   margin-bottom: 0px;
 }
@@ -141,13 +149,10 @@ a:visited {
 .user-list {
   margin: 0.5rem;
   background-color: $f4-color;
-
-  // border: 3px solid $f1-color;
-
   border-radius: 20px;
   width: 250px;
   height: fit-content;
-  max-height: 100%;
+
   max-width: 300px;
   height: auto;
   max-height: 1000px;
@@ -163,7 +168,7 @@ a:visited {
 }
 
 .user-list::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px $f3-color;
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -171,7 +176,7 @@ a:visited {
 
 .user-list::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px $f2-color;
 }
 
 .user-box {
@@ -188,6 +193,7 @@ a:visited {
   margin: 0.3rem;
   text-align: center;
   border-radius: 10px;
+  margin-left: auto;
 }
 
 .badge-warn {
@@ -197,6 +203,7 @@ a:visited {
   margin: 0.3rem;
   text-align: center;
   border-radius: 10px;
+  margin-left: auto;
 }
 
 .image-container-small {
@@ -209,25 +216,42 @@ a:visited {
   background-repeat: no-repeat;
 }
 main {
-  max-width: 1080px;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  width: 60%;
 }
 
 .chat-view {
   border-radius: 10px;
   padding: 1rem;
-  width: 960px;
+  width: 90%;
   background-color: $f4-color;
   display: flex;
   flex-direction: column;
-  align-items: start;
 
-  // border: 2px solid;
-  // border-color: $f1-color;
+  height: 1000px;
+  overflow: auto;
+
 }
+
+.chat-view::-webkit-scrollbar {
+  width: 12px;
+}
+
+.chat-view::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px $f3-color;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.chat-view::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px $f2-color;
+}
+
 .message-box {
   display: flex;
   flex-direction: column;
@@ -267,9 +291,11 @@ main {
   font-size: small;
   margin: 0.125rem;
   text-align: end;
+  color: $f1-color-darker;
 }
 
 .message-input {
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -278,11 +304,18 @@ main {
   border-radius: 2rem;
   position: sticky;
   bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 3px 30px $f3-color;
 }
 .message-input input {
   max-width: 960px;
-  width: 750px;
+  width: 100%;
   color: $f1-color;
+  margin-right: 1rem;
 }
 
 .message-input input:focus {
@@ -297,5 +330,17 @@ main {
     display: block;
     margin: 10px 0;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .user-list {
+    display: none;
+  }
+  main {
+    width: 95%;
+  }
+  .username-text {
+    display: none;
   }
 }
