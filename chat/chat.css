@@ -350,4 +350,11 @@ main {
   .username-text {
     display: none;
   }
+  .logo {
+    font-size: 15px;
+  }
+  .logo a[href] {
+    text-decoration: none;
+    color: #cbe4de;
+  }
 }/*# sourceMappingURL=chat.css.map */

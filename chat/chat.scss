@@ -1,3 +1,5 @@
+// change naming 
+
 // /* Global styles */
 $f1-color: #cbe4de;
 $f1-color-darker: #cbe4dea8;
@@ -343,5 +345,12 @@ main {
   }
   .username-text {
     display: none;
+  }
+  .logo {
+    font-size: 15px;
+  }
+  .logo a[href] {
+    text-decoration: none;
+    color: $f1-color;
   }
 }
